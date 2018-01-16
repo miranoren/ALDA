@@ -13,10 +13,17 @@ public class MyALDAList<T> {
 	
 	private Node <T> first; 
 	private Node <T> last; 
+	
 	// ej implementerad 
 	public void add (T data) {
-		
+		if (first == null) {
+			first = new Node <T> (data); 
+		}else {
+			last.next = new Node <T>(data); 
+			last = last.next; 			
+		}
 	}
+	
 	// ej implementerad 
 	public void add (int index, T data) {
 		
